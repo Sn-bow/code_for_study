@@ -45,6 +45,8 @@ const TypescriptPage = () => {
     school: "다람쥐초등학교"
   }
   profile.age = "8살"
+  profile.hobby = "fff"
+  // hobby?: string  -> hobby가 있을수도 있고 없을 수도 있다.
 
   // 함수타입 -> 어디서든 몇번이든 호출 가능하므, 타입추론 할 수 없음(반드시, 타입명시 필요)
   const add = (number1: number, number2: number, unit: string): string => {
