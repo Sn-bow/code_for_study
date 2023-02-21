@@ -24,9 +24,9 @@ const BoardWrite = (props: IBoardWriteProps) => {
         // const writer = "qqq" // 이 함수에 있으면 현재 스코프
         const result = await 나의함수({
             variables: { // variables 이게 $ 역할을 해줌  $writer -> variables: writer: "들어올 변수 값" || writer: {변수}
-                writer: writer, // 이 함수에 없으면 스코프 체인을 통해서 위 함수에서 찾음
-                title: title,
-                contents: contents
+                writer, // 이 함수에 없으면 스코프 체인을 통해서 위 함수에서 찾음
+                title,
+                contents
             }
         })
         console.log(result)
