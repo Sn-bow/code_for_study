@@ -41,7 +41,7 @@ const TypescriptUtilityPage = () => {
     }  // 기존에 있는 IProfile 에 합쳐짐
 
 
-    let profile: Partial<IProfile> = {}
+    const profile: Partial<IProfile> = {}
 
     profile.age = 10
 

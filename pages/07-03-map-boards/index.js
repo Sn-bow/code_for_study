@@ -30,7 +30,7 @@ const StaticRoutedPage = () => {
     return (
         <>
             {data?.fetchBoards.map(el =>
-                <Row>
+                <Row key={el.id}>
                     <Column><input type="checkbox" /></Column>
                     <Column>{el.number}</Column>
                     <Column>{el.title}</Column>

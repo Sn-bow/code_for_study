@@ -6,7 +6,7 @@ interface IApolloSettinPropsType {
 
 const ApolloSetting = (props: IApolloSettinPropsType) => {
     const client = new ApolloClient({
-        uri: 'http://practice.codebootcamp.co.kr/graphql',
+        uri: ' http://backendonline.codebootcamp.co.kr/graphql',
         cache: new InMemoryCache() // 나중에 할거
     })
 
