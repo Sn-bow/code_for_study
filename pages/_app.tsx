@@ -4,8 +4,26 @@ import { globalStyles } from '../src/commons/styles/globalStyles'
 import ApolloSetting from '../src/components/commons/apollo/Apollo'
 import Layout from '../src/components/commons/layout'
 
-export default function App({ Component, pageProps }: AppProps) {
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCseHtmtq9KGU81B_wydKvdt-nijBa0qAo",
+  authDomain: "codecamp-da5c1.firebaseapp.com",
+  projectId: "codecamp-da5c1",
+  storageBucket: "codecamp-da5c1.appspot.com",
+  messagingSenderId: "549956869766",
+  appId: "1:549956869766:web:c648907c3420ab83053b07"
+};
+
+// Initialize Firebase
+export const firebaseApp = initializeApp(firebaseConfig);
+
+
+export default function App({ Component, pageProps }: AppProps) {
   return (
     <ApolloSetting>
       <>
