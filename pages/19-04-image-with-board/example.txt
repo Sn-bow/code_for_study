@@ -1,0 +1,18 @@
+import { gql, useMutation } from '@apollo/client'
+import { ChangeEvent, useRef, useState } from 'react'
+import { checkValidationFile } from '../../src/commons/libraries/validationFile'
+import { IMutation, IMutationUploadFileArgs } from '../../src/commons/types/generated/types'
+
+
+
+export default function ImageUploadPage() {
+   
+
+    
+
+    
+
+    return (
+       
+    )
+}

@@ -7,6 +7,7 @@ export default function FirebasePage() {
     const onClickSubmit = async () => {
         const board = collection(getFirestore(firebaseApp), 'board')
         await addDoc(board, {
+            id: 1,
             writer: "철수",
             title: '제목입니다.',
             contents: '내용이에요!!'
