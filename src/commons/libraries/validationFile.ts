@@ -14,7 +14,7 @@ export const checkValidationFile = (file?: File) => {
     !file.type.includes("jpeg") &&
     !file.type.includes("png")
   ) {
-    alert("jpeg 파일 또는 png 파일만 업로드 가능합니다!!");
+    alert("jpeg 파일, jpg 파일 또는 png 파일만 업로드 가능합니다!!");
     return false;
   }
 
