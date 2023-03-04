@@ -7,6 +7,9 @@ import {
 } from '@apollo/client'
 import { createUploadLink } from 'apollo-upload-client'
 
+
+const GLOBAL_STATE = new InMemoryCache()
+
 interface IApolloSettinPropsType {
     children: JSX.Element
 }
@@ -19,7 +22,7 @@ const ApolloSetting = (props: IApolloSettinPropsType) => {
 
     const client = new ApolloClient({
         link: ApolloLink.from([uploadFile]),
-        cache: new InMemoryCache() // 나중에 할거
+        cache: GLOBAL_STATE // 페이지 전환 (_app.tsx 리젠더) 되어도, 캐시 유지
     })
 
     return (

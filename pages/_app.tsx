@@ -6,6 +6,7 @@ import Layout from '../src/components/commons/layout'
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { RecoilRoot } from 'recoil'
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -25,16 +26,18 @@ export const firebaseApp = initializeApp(firebaseConfig);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <ApolloSetting>
-      <>
-        <Global styles={globalStyles}
-        />
-        <div>ppppppppppppp</div>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </>
-    </ApolloSetting>
+    <RecoilRoot>
+      <ApolloSetting>
+        <>
+          <Global styles={globalStyles}
+          />
+          <div>ppppppppppppp</div>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </>
+      </ApolloSetting>
+    </RecoilRoot>
   )
 }
 
