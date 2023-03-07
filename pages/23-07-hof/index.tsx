@@ -38,8 +38,9 @@ const StaticRoutedPage = () => {
     const mapArray = new Array(10).fill(1)
     console.log(mapArray)
 
-    const paginationHandler = (pageId: number) => (e: MouseEvent<HTMLSpanElement>) => {
-        void refetch({ page: Number(pageId) })
+    //                          index + 1               event
+    const paginationHandler = (boardId: number) => (e: MouseEvent<HTMLSpanElement>) => {
+        void refetch({ page: Number(boardId) })
     }
 
     return (
@@ -52,6 +53,7 @@ const StaticRoutedPage = () => {
             )}
             {
                 mapArray.map((_, index) => (
+                    // paginationHandler(index + 1)(event)  / closer HOF 을 사용하면 예상치 못한 에러를 잡을 수 있다.
                     <span key={index} onClick={paginationHandler(index + 1)}>
                         {index + 1}
                     </span>
@@ -62,3 +64,12 @@ const StaticRoutedPage = () => {
 }
 
 export default StaticRoutedPage;
+
+
+// const aaa = (apple) => {
+
+// }
+
+// aaa(10)
+
+// pageinationHandler(event)
