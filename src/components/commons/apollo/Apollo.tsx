@@ -44,8 +44,6 @@ const ApolloSetting = (props: IApolloSettinPropsType) => {
 
     // 프리렌더링 예제 = useEffect 방법 -> 프리렌더링을 무시
     useEffect(() => {
-        alert('브라우저에서 실행된다!!')
-        console.log('지금은 부라우저다.')
         const result = localStorage.getItem("accessToken")
         if (result) setAccesssToken(result)
     }, [])
