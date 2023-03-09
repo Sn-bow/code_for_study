@@ -61,3 +61,11 @@ const result = getGeneric3("철수", 123, true);
 
 
 
+//
+//
+// 7. generic 타입 4 => 그냥 자바스크립트와 같음 // 처음에는 어떤 값을 넣든 상관없지만 한번 넣게되면 그 타입이 고정이 된다.
+const getGeneric4 = <T, U, V>(arg1: T, arg2: U, arg3: V): [V, U, T] => {
+    return [arg3, arg2, arg1]
+}
+
+const result = getGeneric4("철수", 123, true);
