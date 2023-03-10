@@ -6,10 +6,11 @@ import {
 
 } from '@apollo/client'
 import { createUploadLink } from 'apollo-upload-client'
-import { useEffect } from 'react'
+// import { useEffect } from 'react'
 import { useRecoilState } from 'recoil'
 import { accessTokenState } from '../../../commons/store'
-import { withApollo } from '../hocs/withApollo'
+// import { withApollo } from '../hocs/withApollo'
+import { useApollo } from '../hooks/useApollo'
 
 
 const GLOBAL_STATE = new InMemoryCache()
@@ -19,8 +20,8 @@ interface IApolloSettinPropsType {
 }
 
 const ApolloSetting = (props: IApolloSettinPropsType) => {
+    useApollo()
     const [accessToken, setAccesssToken] = useRecoilState(accessTokenState)
-
 
 
     const uploadFile = createUploadLink({
@@ -40,4 +41,4 @@ const ApolloSetting = (props: IApolloSettinPropsType) => {
     )
 }
 
-export default withApollo(ApolloSetting)
+export default ApolloSetting

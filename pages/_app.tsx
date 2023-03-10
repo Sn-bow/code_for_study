@@ -26,6 +26,9 @@ export const firebaseApp = initializeApp(firebaseConfig);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
+    // <Head>  모든 페이지에서 카카오맵을 다운로드 받으므로 비효율적임 
+    //             <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9445fe307cdae2bd0b042e5274416e2"></script>
+    //         </Head>
     <RecoilRoot>
       <ApolloSetting>
         <>
