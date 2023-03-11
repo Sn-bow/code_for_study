@@ -3,8 +3,8 @@ import styled from '@emotion/styled'
 import { IQuery, IQueryFetchBoardsArgs } from '../../src/commons/types/generated/types'
 
 const FETCH_BOARDS = gql`
-query fetchBoards($page: Int){
-    fetchBoards(page: $page){
+query fetchBoards{
+    fetchBoards{
       _id
       writer
       title

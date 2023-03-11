@@ -31,7 +31,8 @@ const ApolloSetting = (props: IApolloSettinPropsType) => {
 
     const client = new ApolloClient({
         link: ApolloLink.from([uploadFile]),
-        cache: GLOBAL_STATE // 페이지 전환 (_app.tsx 리젠더) 되어도, 캐시 유지
+        cache: GLOBAL_STATE, // 페이지 전환 (_app.tsx 리젠더) 되어도, 캐시 유지
+        connectToDevTools: true
     })
 
     return (
