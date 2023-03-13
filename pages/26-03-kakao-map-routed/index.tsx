@@ -27,9 +27,9 @@ export default function KakaoMapPage() {
 
     return (
         <>
-            <Head>
+            {/* <Head>
                 <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=a9445fe307cdae2bd0b042e5274416e2"></script>
-            </Head>
+            </Head> */}
             <div id='map' style={{ width: '500px', height: '500px' }} ></div>
         </>
     )
