@@ -41,16 +41,15 @@ const StaticRoutedPage = () => {
             </div>
             {
                 data
-                    &&
-                    (typeof window !== 'undefined')
-                    ?
-                    <div style={{ color: 'blue' }}>
-                        {/* 내용 : {data?.fetchBoard.contents} */}
-                        <div dangerouslySetInnerHTML={{ __html: Dompurify.sanitize(data?.fetchBoard.contents) }}>
-                        </div>
+                &&
+                // Dompurify 라이브러리를 사용할때 프리 렌더링시에 에러가 발생하여 window의 브라우저에서만 사용 가능하도록 해주는 조건
+                (typeof window !== 'undefined')
+                &&
+                <div style={{ color: 'blue' }}>
+                    {/* 내용 : {data?.fetchBoard.contents} */}
+                    <div dangerouslySetInnerHTML={{ __html: Dompurify.sanitize(data?.fetchBoard.contents) }}>
                     </div>
-                    :
-                    <div style={{ color: 'blue' }}></div>
+                </div>
             }
             <div style={{ color: 'brown' }}>주소: 구로구</div>
         </>
