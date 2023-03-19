@@ -23,6 +23,7 @@ export default function PaymentPage() {
             buyer_tel: '010-1234-5678',
             buyer_addr: '서울특별시 강남구 삼성동',
             buyer_postcode: '123-456',
+
             m_redirect_url: "http://localhost:3000/28-01-payment", // 모바일의 경우 웹사이트처럼 다른 웹브라우저가 생성되어서 결제되는게 아닌 페이지 자체가 넘어가므로, 그럴경우 다시 원래의 페이지나 영수증 페이지와 같은 페이지로 다시 돌아오게끔 설정 해주어야한다.
             display: {
                 card_quota: [3]  // 할부개월 3개월까지 활성화
@@ -31,6 +32,7 @@ export default function PaymentPage() {
             (rsp: any) => { // callback
                 if (rsp.success) {
                     console.log(rsp);
+                    // const paymentDate = new Date() // 프론트엔드에서 시간을 만드는 것은 안됨!!
 
                     // 백엔드에 결제 관련 데이터 넘겨주기, 즉 뮤테이션 실행하기
                     // createPointTranscationOfLoding
